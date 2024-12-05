@@ -47,7 +47,6 @@
 		951F6EBD2BB65E1F001FDB50 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F6EBC2BB65E1F001FDB50 /* CoreFunctions.swift */; };
 		951F6EC02BB669DF001FDB50 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F6EBF2BB669DF001FDB50 /* ImageHelper.swift */; };
 		951F6ED12BB68A1D001FDB50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951F6ED02BB68A1D001FDB50 /* LaunchScreen.storyboard */; };
-		951F6ED42BB68E68001FDB50 /* CoreUserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 951F6ED22BB68E68001FDB50 /* CoreUserModel.xcdatamodeld */; };
 		951F6ED92BB69806001FDB50 /* GetUsers.graphql.swift in Resources */ = {isa = PBXBuildFile; fileRef = 951F6ED82BB69806001FDB50 /* GetUsers.graphql.swift */; };
 		951F6F172BB84D28001FDB50 /* GetUserEvents.graphql.swift in Resources */ = {isa = PBXBuildFile; fileRef = 951F6F162BB84D28001FDB50 /* GetUserEvents.graphql.swift */; };
 		951F6F1E2BB8B134001FDB50 /* TextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F6F1D2BB8B134001FDB50 /* TextFieldHelper.swift */; };
@@ -97,6 +96,7 @@
 		B8CD7F742B758E2C00F05DBA /* HomePageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD7F732B758E2C00F05DBA /* HomePageContentView.swift */; };
 		B8EF26FD2B8FB0B900F98FA2 /* Viga-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8EF26FC2B8FB0B900F98FA2 /* Viga-Regular.ttf */; };
 		B8EF27022B8FD25700F98FA2 /* UniversLTStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8EF27012B8FD25700F98FA2 /* UniversLTStd.otf */; };
+		C51841932CEFEF5900806BF2 /* CoreUserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C51841912CEFEF5900806BF2 /* CoreUserModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,7 +160,6 @@
 		951F6EBC2BB65E1F001FDB50 /* CoreFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFunctions.swift; sourceTree = "<group>"; };
 		951F6EBF2BB669DF001FDB50 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		951F6ED02BB68A1D001FDB50 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		951F6ED32BB68E68001FDB50 /* CoreUserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreUserModel.xcdatamodel; sourceTree = "<group>"; };
 		951F6ED82BB69806001FDB50 /* GetUsers.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsers.graphql.swift; sourceTree = "<group>"; };
 		951F6F162BB84D28001FDB50 /* GetUserEvents.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserEvents.graphql.swift; sourceTree = "<group>"; };
 		951F6F1D2BB8B134001FDB50 /* TextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHelper.swift; sourceTree = "<group>"; };
@@ -205,6 +204,7 @@
 		B8EF26FC2B8FB0B900F98FA2 /* Viga-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Viga-Regular.ttf"; sourceTree = "<group>"; };
 		B8EF26FE2B8FB40B00F98FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8EF27012B8FD25700F98FA2 /* UniversLTStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = UniversLTStd.otf; sourceTree = "<group>"; };
+		C51841922CEFEF5900806BF2 /* CoreUserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreUserModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,7 +433,7 @@
 		951F6E792BB262C5001FDB50 /* coreData */ = {
 			isa = PBXGroup;
 			children = (
-				951F6ED22BB68E68001FDB50 /* CoreUserModel.xcdatamodeld */,
+				C51841912CEFEF5900806BF2 /* CoreUserModel.xcdatamodeld */,
 				951F6E7D2BB265D3001FDB50 /* DataManager.swift */,
 				951F6EBC2BB65E1F001FDB50 /* CoreFunctions.swift */,
 			);
@@ -755,6 +755,7 @@
 				4632E4742B6B575E0048782D /* PointsUI.swift in Sources */,
 				4632E4762B6B57A00048782D /* RedeemPointsButton.swift in Sources */,
 				959BEA7C2BF461CD0009789D /* SchemaConfiguration.swift in Sources */,
+				C51841932CEFEF5900806BF2 /* CoreUserModel.xcdatamodeld in Sources */,
 				959BEA6D2BF461CD0009789D /* RedeemPointsMutation.graphql.swift in Sources */,
 				958CB0262B9CE724002B83F9 /* SHPEUFAppViewModel.swift in Sources */,
 				46909DFA2B96907D00E99274 /* UserEvent.swift in Sources */,
@@ -790,7 +791,6 @@
 				959BEA772BF461CD0009789D /* RegisterInput.graphql.swift in Sources */,
 				462B6F4A2B7180AB00EB575C /* CircularProgessView.swift in Sources */,
 				951F6E8C2BB3BD69001FDB50 /* ProfileViewModel.swift in Sources */,
-				951F6ED42BB68E68001FDB50 /* CoreUserModel.xcdatamodeld in Sources */,
 				959BEA752BF461CD0009789D /* EditUserProfileInput.graphql.swift in Sources */,
 				46CA418F2B7EC82B0083F81C /* SingleEventView.swift in Sources */,
 				951F6E7E2BB265D3001FDB50 /* DataManager.swift in Sources */,
@@ -985,6 +985,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1017,6 +1018,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1174,14 +1176,13 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		951F6ED22BB68E68001FDB50 /* CoreUserModel.xcdatamodeld */ = {
+		C51841912CEFEF5900806BF2 /* CoreUserModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				951F6ED32BB68E68001FDB50 /* CoreUserModel.xcdatamodel */,
+				C51841922CEFEF5900806BF2 /* CoreUserModel.xcdatamodel */,
 			);
-			currentVersion = 951F6ED32BB68E68001FDB50 /* CoreUserModel.xcdatamodel */;
-			name = CoreUserModel.xcdatamodeld;
-			path = "/Users/danielparra/Desktop/SHPE/SHPE-UF-Mobile-Swift/SHPE-UF-Mobile-Swift/SHPE-UF-Mobile-Swift/coreData/CoreUserModel.xcdatamodeld";
+			currentVersion = C51841922CEFEF5900806BF2 /* CoreUserModel.xcdatamodel */;
+			path = CoreUserModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

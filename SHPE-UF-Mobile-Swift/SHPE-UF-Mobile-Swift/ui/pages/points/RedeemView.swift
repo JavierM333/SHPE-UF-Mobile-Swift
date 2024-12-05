@@ -19,7 +19,7 @@ struct RedeemView: View {
     @FetchRequest(sortDescriptors: []) private var coreEvents: FetchedResults<CoreUserEvent>
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 Rectangle()
                   .foregroundColor(.clear)

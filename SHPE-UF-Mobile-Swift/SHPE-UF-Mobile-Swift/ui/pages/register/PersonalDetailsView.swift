@@ -21,26 +21,26 @@ struct PersonalView : View
                     {
                         //header message
                         Text("Enter your info to finalize your profile")
-                          .font(Font.custom("Univers LT Std", size: 14))
-                          .foregroundColor(Color("whiteText"))
+                            .font(Font.custom("Univers LT Std", size: 14))
+                            .foregroundColor(Color("whiteText"))
                         
                         //personal details header
                         Text("Personal Details")
-                          .font(Font.custom("Viga-Regular", size: 37))
-                          .foregroundColor(Color(red: 0.82, green: 0.35, blue: 0.09))
-                          .frame(maxWidth: .infinity, alignment: .topLeading)
+                            .font(Font.custom("Viga-Regular", size: 37))
+                            .foregroundColor(Color(red: 0.82, green: 0.35, blue: 0.09))
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
                     }
                     
                     Spacer()
                     
                     //pfp imagae
                     Image("User_cicrle_duotone")
-                      .frame(width: 50, height: 52.5)
-                      .clipped()
+                        .frame(width: 50, height: 52.5)
+                        .clipped()
                 }
                 .padding(.horizontal)
-            
-            
+                
+                
                 Spacer()
                 
                 //user fields
@@ -51,9 +51,9 @@ struct PersonalView : View
                     {
                         //first name
                         Text("First Name")
-                          .font(Font.custom("Univers LT Std", size: 16))
-                          .foregroundColor(Color("whiteText"))
-                          .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
+                            .font(Font.custom("Univers LT Std", size: 16))
+                            .foregroundColor(Color("whiteText"))
+                            .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
                         HStack(spacing: 0)
                         {
                             Image("swift.littlepfp")
@@ -71,7 +71,7 @@ struct PersonalView : View
                         .cornerRadius(10)
                         
                         //first name validation
-                        if !viewModel.validateFirstName() && viewModel.firstNameValidated 
+                        if !viewModel.validateFirstName() && viewModel.firstNameValidated
                         {
                             Text("3-20 characters, no special characters or numbers")
                                 .font(.caption)
@@ -81,9 +81,9 @@ struct PersonalView : View
                         
                         //last name
                         Text("Last Name")
-                          .font(Font.custom("Univers LT Std", size: 16))
-                          .foregroundColor(Color("whiteText"))
-                          .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
+                            .font(Font.custom("Univers LT Std", size: 16))
+                            .foregroundColor(Color("whiteText"))
+                            .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
                         HStack(spacing: 0)
                         {
                             Image("swift.littlepfp")
@@ -101,7 +101,7 @@ struct PersonalView : View
                         .cornerRadius(10)
                         
                         //last name validation
-                        if !viewModel.validateLastName() && viewModel.lastNameValidated 
+                        if !viewModel.validateLastName() && viewModel.lastNameValidated
                         {
                             Text("3-20 characters, no special characters or numbers")
                                 .font(.caption)
@@ -111,9 +111,9 @@ struct PersonalView : View
                         
                         //gender
                         Text("Gender")
-                          .font(Font.custom("Univers LT Std", size: 16))
-                          .foregroundColor(Color("whiteText"))
-                          .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
+                            .font(Font.custom("Univers LT Std", size: 16))
+                            .foregroundColor(Color("whiteText"))
+                            .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
                         HStack(spacing: 0)
                         {
                             Image("swift.littlegender")
@@ -125,16 +125,16 @@ struct PersonalView : View
                             Spacer()
                             
                             //dropdown for gender
-                            Picker("", selection: $viewModel.genderInput) 
+                            Picker("", selection: $viewModel.genderInput)
                             {
                                 ForEach(viewModel.genderOptions, id: \.self) { option in
                                     Text(option).tag(option)
                                 }
                             }
                             .accentColor(.black)
-                            .onChange(of: viewModel.genderInput, {
+                            .onChange(of: viewModel.genderInput) {newValue in
                                 viewModel.genderPickerInteracted = true
-                            })
+                            }
                         }
                         .padding(.vertical, 2.75)
                         .frame(width: 270, height: 37.64706)
@@ -142,7 +142,7 @@ struct PersonalView : View
                         .cornerRadius(10)
                         
                         //gender validation
-                        if !viewModel.validateGenderSelected() && viewModel.genderPickerInteracted 
+                        if !viewModel.validateGenderSelected() && viewModel.genderPickerInteracted
                         {
                             Text("Gender selection is required")
                                 .font(.caption)
@@ -152,9 +152,9 @@ struct PersonalView : View
                         
                         //ethnicity
                         Text("Ethncity")
-                          .font(Font.custom("Univers LT Std", size: 16))
-                          .foregroundColor(Color("whiteText"))
-                          .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
+                            .font(Font.custom("Univers LT Std", size: 16))
+                            .foregroundColor(Color("whiteText"))
+                            .frame(width: 95.59007, height: 16.47059, alignment: .topLeading)
                         
                         HStack(spacing: 0)
                         {
@@ -167,15 +167,16 @@ struct PersonalView : View
                             Spacer()
                             
                             //dropdown for ethnicity
-                            Picker("", selection: $viewModel.ethnicityInput) 
+                            Picker("", selection: $viewModel.ethnicityInput)
                             {
-                                ForEach(viewModel.ethnicityOptions, id: \.self) 
+                                ForEach(viewModel.ethnicityOptions, id: \.self)
                                 {
                                     option in Text(option).tag(option)
                                 }
                             }
                             .accentColor(.black)
-                            .onChange(of: viewModel.ethnicityInput, { viewModel.ethnicityPickerInteracted = true })
+                            .onChange(of: viewModel.ethnicityInput) { newValue in viewModel.ethnicityPickerInteracted = true
+                            }
                         }
                         .padding(.vertical, 2.75)
                         .frame(width: 270, height: viewModel.calculatePickerHeight(for: viewModel.ethnicityInput, maxWidth: 270, fontSize: 16))
@@ -216,62 +217,63 @@ struct PersonalView : View
                                 }
                             }
                             .accentColor(.black)
-                            .onChange(of: viewModel.originInput, { viewModel.originPickerInteracted = true })
-                       }
-                       .pickerStyle(MenuPickerStyle())
-                       .frame(width: 270, height: viewModel.calculatePickerHeight(for: viewModel.originInput, maxWidth: 270, fontSize: 18))
-                       .background(Color.white)
-                       .cornerRadius(10)
+                            .onChange(of: viewModel.genderInput) { newValue in
+                                viewModel.genderPickerInteracted = true
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .frame(width: 270, height: viewModel.calculatePickerHeight(for: viewModel.originInput, maxWidth: 270, fontSize: 18))
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            
+                            //origin validation
+                            if !viewModel.validateCountryOfOriginSelected() && viewModel.originPickerInteracted
+                            {
+                                Text("Country of Origin is required")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                            }
+                        }
+                        .padding(.horizontal, 50)
+                    }
+                    //                .padding(.horizontal, 50)
+                    
+                    Spacer()
+                    
+                    HStack
+                    {
+                        //back button
+                        Button(action:
+                                {
+                            //move to AcademicView if valid
+                            viewModel.firstNameValidated = true
+                            viewModel.lastNameValidated = true
+                            viewModel.genderPickerInteracted = true
+                            viewModel.ethnicityPickerInteracted = true
+                            viewModel.originPickerInteracted = true
+                            if viewModel.isPersonalValid()
+                            {
+                                viewModel.viewIndex = 2
+                            }
+                        })
+                        {
+                            Text("Continue")
+                                .font(Font.custom("Univers LT Std", size: 16))
+                                .foregroundColor(.white)
+                                .frame(width: 351, height: 42)
+                                .background(Color(red: 0.82, green: 0.35, blue: 0.09))
+                                .cornerRadius(20)
+                        }
                         
-                        //origin validation
-                        if !viewModel.validateCountryOfOriginSelected() && viewModel.originPickerInteracted 
-                        {
-                            Text("Country of Origin is required")
-                                .font(.caption)
-                                .foregroundColor(.red)
-                        }
                     }
-                    .padding(.horizontal, 50)
+                    .padding(.bottom, 40)
                 }
-//                .padding(.horizontal, 50)
-                
-                Spacer()
-                
-                HStack
-                {
-                    //back button
-                    Button(action: 
-                    {
-                        //move to AcademicView if valid
-                        viewModel.firstNameValidated = true
-                        viewModel.lastNameValidated = true
-                        viewModel.genderPickerInteracted = true
-                        viewModel.ethnicityPickerInteracted = true
-                        viewModel.originPickerInteracted = true
-                        if viewModel.isPersonalValid()
-                        {
-                            viewModel.viewIndex = 2
-                        }
-                    })
-                    {
-                        Text("Continue")
-                            .font(Font.custom("Univers LT Std", size: 16))
-                            .foregroundColor(.white)
-                            .frame(width: 351, height: 42)
-                            .background(Color(red: 0.82, green: 0.35, blue: 0.09))
-                            .cornerRadius(20)
-                    }
-
-                }
-                .padding(.bottom, 40)
+                .background(Color("darkBlue"))
             }
-            .background(Color("darkBlue"))
         }
     }
 }
 
-#Preview(body: 
-{
+#Preview(body:
+            {
     PersonalView(viewModel: RegisterViewModel())
 })
-

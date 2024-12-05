@@ -134,7 +134,7 @@ struct PointsViewDark: View {
         .sheet(isPresented: $redeem, content: {
             RedeemView(vm: vm)
         })
-        .backgroundStyle(.black)
+        .background(Color.black)
         .ignoresSafeArea()
         
         

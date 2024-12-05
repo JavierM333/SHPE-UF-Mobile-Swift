@@ -24,7 +24,7 @@ struct PointsUI: View {
             HStack {
                 Text(semester.uppercased())
                     .foregroundStyle(.white)
-                    .font(.title2).bold().fontDesign(.monospaced)
+                    .font(.custom("Menlo-Bold", size: 22))
                     .frame(width: 85)
                     
 
@@ -38,7 +38,7 @@ struct PointsUI: View {
                 
                 Text("TOP \(percent)%")
                     .foregroundStyle(.white)
-                    .font(.title2).bold().fontDesign(.monospaced)
+                    .font(.custom("Menlo-Bold", size: 22))
                     .frame(width: 100)
                     .padding()
                 
@@ -52,7 +52,7 @@ struct PointsUI: View {
                 
                 Text(String(points))
                     .foregroundStyle(.white)
-                    .font(.title2).bold().fontDesign(.monospaced)
+                    .font(.custom("Menlo-Bold", size: 22))
                     .frame(width: 60)
                 
             }
